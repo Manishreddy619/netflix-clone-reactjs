@@ -10,7 +10,7 @@ import {
 import { Search, ArrowRight } from "react-bootstrap-icons";
 import SearchQeury from "./SearchQeury";
 import { Component } from "react";
-import "./Navbar.css";
+import "./NavBar.css";
 class NavBar extends Component {
   state = {
     buttonClick: false,
