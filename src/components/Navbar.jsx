@@ -4,10 +4,8 @@ import {
   FormControl,
   Button,
   Navbar,
-  NavDropdown,
   SplitButton,
   Dropdown,
-  Container,
 } from "react-bootstrap";
 import { Search, ArrowRight } from "react-bootstrap-icons";
 const NavBar = () => {
