@@ -11,7 +11,6 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-      <SearchQeury />
       <Gallery1 />
       <Gallery2 />
       <Gallery3 />
