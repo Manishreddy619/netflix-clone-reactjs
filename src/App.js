@@ -2,6 +2,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-elastic-carousel";
 import MovieCard from "./components/MovieCard";
+import NavBar from "./components/Navbar";
 const App = () => {
   let breakPoints = [
     { width: 500, itemsToShow: 1 },
@@ -10,8 +11,8 @@ const App = () => {
     { width: 1500, itemsToShow: 6 },
   ];
   return (
-    <div className="App mt-4">
-      <h1>Hello Manish</h1>
+    <div className="App">
+      <NavBar />
       <Carousel breakPoints={breakPoints}>
         <MovieCard />
         <MovieCard />
