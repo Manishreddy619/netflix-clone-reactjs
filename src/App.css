@@ -17,5 +17,32 @@
   color: #fff;
 }
 #navbarScrollingDropdown {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+}
+
+footer {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 80px;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+footer ul li a {
+  color: #ffffff;
+}
+
+footer .icons i {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.break-line {
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.copyright {
+  color: rgb(194, 189, 189);
 }

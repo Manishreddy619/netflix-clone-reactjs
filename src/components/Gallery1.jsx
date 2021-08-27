@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import Carousel from 'react-elastic-carousel';
 import MovieCard from './MovieCard';
+import { Alert, ListGroup, Spinner } from 'react-bootstrap';
 class Gallery1 extends Component {
 	breakPoints = [
-		{ width: 500, itemsToShow: 1 },
-		{ width: 700, itemsToShow: 2 },
-		{ width: 1200, itemsToShow: 4 },
+		{ width: 500, itemsToShow: 2 },
+		{ width: 700, itemsToShow: 3 },
+		{ width: 1200, itemsToShow: 5 },
 		{ width: 1500, itemsToShow: 6 },
 	];
 	state = {
 		// initial value?
 		movies: [],
+		isLoading: true,
+		isError: false,
 	};
 	fetch = async () => {
 		console.log("I'm componentDidMount");
@@ -29,24 +32,25 @@ class Gallery1 extends Component {
 
 			if (response.ok) {
 				let moviesResult = await response.json();
-				console.log(moviesResult);
+				console.log(moviesResult.Search);
 				this.setState({
+					isLoading: false,
 					movies: moviesResult.Search,
 					// this is equal to reservations: reservations
 				});
 			} else {
 				console.log('something went wrong with the server');
-				// this.setState({
-				// 	isLoading: false,
-				// 	isError: true,
-				// });
+				this.setState({
+					isLoading: false,
+					isError: true,
+				});
 			}
 		} catch (error) {
 			console.log(error);
-			// this.setState({
-			// 	isLoading: false,
-			// 	isError: true,
-			// });
+			this.setState({
+				isLoading: false,
+				isError: true,
+			});
 		}
 	};
 	componentDidMount = async () => {
@@ -56,15 +60,22 @@ class Gallery1 extends Component {
 	render() {
 		return (
 			<div>
+				{this.state.isLoading && ( // this is called the SHORT-CIRCUIT operator
+					<Spinner animation='border' variant='success' className='mx-auto' />
+				)}
+				{this.state.isError && (
+					<Alert variant='danger'>An error occurred!</Alert>
+				)}
+				{this.state.movies.length === 0 && !this.state.isLoading}?({' '}
 				<h3 className='ml-4' style={{ color: 'white' }}>
 					Action
 				</h3>
-				;
 				<Carousel breakPoints={this.breakPoints}>
 					{this.state.movies.map((movie) => {
 						return <MovieCard img={movie.Poster} key={movie.imdbID} />;
 					})}
 				</Carousel>
+				):""
 			</div>
 		);
 	}
