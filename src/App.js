@@ -1,29 +1,18 @@
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Carousel from "react-elastic-carousel";
-import MovieCard from "./components/MovieCard";
-const App = () => {
-  let breakPoints = [
-    { width: 500, itemsToShow: 1 },
-    { width: 700, itemsToShow: 2 },
-    { width: 1200, itemsToShow: 4 },
-    { width: 1500, itemsToShow: 6 },
-  ];
-  return (
-    <div className="App mt-4">
-      <h1>Hello Manish</h1>
-      <Carousel breakPoints={breakPoints}>
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-      </Carousel>
-    </div>
-  );
-};
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Gallery1 from './components/Gallery1';
+import Gallery2 from './components/Gallery2';
+import Gallery3 from './components/Gallery3';
+import SearchQeury from './components/SearchQeury';
 
+const App = () => {
+	return (
+		<div className='App mt-4'>
+			<SearchQeury />
+			<Gallery1 />
+			<Gallery2 />
+			<Gallery3 />
+		</div>
+	);
+};
 export default App;
