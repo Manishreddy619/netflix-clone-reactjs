@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Carousel from 'react-elastic-carousel';
 import MovieCard from './MovieCard';
-class Gallery1 extends Component {
+class Gallery3 extends Component {
 	breakPoints = [
 		{ width: 500, itemsToShow: 1 },
 		{ width: 700, itemsToShow: 2 },
@@ -23,7 +23,7 @@ class Gallery1 extends Component {
 		// componentDidMount will always happen JUST ONCE!!!
 		try {
 			let response = await fetch(
-				'http://www.omdbapi.com/?i=tt3896198&apikey=caa9d684&s=action',
+				'http://www.omdbapi.com/?i=tt3896198&apikey=caa9d684&s=harry',
 			);
 			// console.log(response)
 
@@ -57,7 +57,7 @@ class Gallery1 extends Component {
 		return (
 			<div>
 				<h3 className='ml-4' style={{ color: 'white' }}>
-					Action
+					Suggested
 				</h3>
 				;
 				<Carousel breakPoints={this.breakPoints}>
@@ -70,4 +70,4 @@ class Gallery1 extends Component {
 	}
 }
 
-export default Gallery1;
+export default Gallery3;
