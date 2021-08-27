@@ -1,15 +1,12 @@
 import React from 'react';
 import './Card.css';
 
-const Card = () => {
+const MovieCard = (props) => {
 	return (
 		<div className='card'>
-			<img
-				src='https://m.media-amazon.com/images/M/MV5BNzU4NWEwNDItMzMzYy00ZDYyLWIxZjMtMDlkYWVjNjQwYzBjXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg'
-				alt=''
-			/>
+			<img src={props.img} alt='moviecard' />
 		</div>
 	);
 };
 
-export default Card;
+export default MovieCard;
