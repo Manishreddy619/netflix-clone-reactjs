@@ -5,6 +5,7 @@ import Gallery2 from "./components/Gallery2";
 import Gallery3 from "./components/Gallery3";
 import SearchQeury from "./components/SearchQeury";
 import NavBar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Gallery1 />
       <Gallery2 />
       <Gallery3 />
+      <Footer />
     </div>
   );
 };
