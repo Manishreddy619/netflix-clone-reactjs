@@ -1,0 +1,5 @@
+.nav-change {
+	top: 0 !important;
+	position: sticky;
+	z-index: 999;
+}

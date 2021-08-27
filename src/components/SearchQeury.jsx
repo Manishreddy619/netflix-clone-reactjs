@@ -4,9 +4,9 @@ import MovieCard from './MovieCard';
 import { Button, Form, Row, Col } from 'react-bootstrap';
 class SearchQeury extends Component {
 	breakPoints = [
-		{ width: 500, itemsToShow: 1 },
-		{ width: 700, itemsToShow: 2 },
-		{ width: 1200, itemsToShow: 4 },
+		{ width: 500, itemsToShow: 2 },
+		{ width: 700, itemsToShow: 3 },
+		{ width: 1200, itemsToShow: 5 },
 		{ width: 1500, itemsToShow: 6 },
 	];
 	state = {
