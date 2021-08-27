@@ -1,4 +1,3 @@
-
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Gallery1 from './components/Gallery1';
@@ -16,6 +15,4 @@ const App = () => {
 		</div>
 	);
 };
-
 export default App;
-
